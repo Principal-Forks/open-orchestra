@@ -199,5 +199,196 @@
         "shape": "rectangle"
       }
     }
+  ],
+  "edges": [
+    {
+      "id": "opencode_to_orchestrator",
+      "fromNode": "opencode",
+      "toNode": "orchestrator",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#4CAF50",
+      "label": "plugin host"
+    },
+    {
+      "id": "config_to_orchestrator",
+      "fromNode": "config",
+      "toNode": "orchestrator",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#9E9E9E",
+      "label": "configuration"
+    },
+    {
+      "id": "model_catalog_to_orchestrator",
+      "fromNode": "model_catalog",
+      "toNode": "orchestrator",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#3F51B5",
+      "label": "model resolution"
+    },
+    {
+      "id": "orchestrator_to_registry",
+      "fromNode": "orchestrator",
+      "toNode": "registry",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#795548",
+      "label": "manages"
+    },
+    {
+      "id": "orchestrator_to_spawner",
+      "fromNode": "orchestrator",
+      "toNode": "spawner",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#795548",
+      "label": "manages"
+    },
+    {
+      "id": "registry_to_vision",
+      "fromNode": "registry",
+      "toNode": "vision_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF9800",
+      "label": "tracks"
+    },
+    {
+      "id": "registry_to_docs",
+      "fromNode": "registry",
+      "toNode": "docs_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF9800",
+      "label": "tracks"
+    },
+    {
+      "id": "registry_to_coder",
+      "fromNode": "registry",
+      "toNode": "coder_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF9800",
+      "label": "tracks"
+    },
+    {
+      "id": "registry_to_architect",
+      "fromNode": "registry",
+      "toNode": "architect_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF9800",
+      "label": "tracks"
+    },
+    {
+      "id": "registry_to_explorer",
+      "fromNode": "registry",
+      "toNode": "explorer_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF9800",
+      "label": "tracks"
+    },
+    {
+      "id": "registry_to_memory",
+      "fromNode": "registry",
+      "toNode": "memory_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF9800",
+      "label": "tracks"
+    },
+    {
+      "id": "memory_to_neo4j",
+      "fromNode": "memory_worker",
+      "toNode": "neo4j",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#00BCD4",
+      "label": "stores/queries"
+    },
+    {
+      "id": "orchestrator_to_idle",
+      "fromNode": "orchestrator",
+      "toNode": "idle_notifier",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#FFC107",
+      "label": "notifications"
+    },
+    {
+      "id": "orchestrator_to_pruning",
+      "fromNode": "orchestrator",
+      "toNode": "context_pruning",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#FF6F00",
+      "label": "context mgmt"
+    },
+    {
+      "id": "spawner_to_workers",
+      "fromNode": "spawner",
+      "toNode": "vision_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF5722",
+      "label": "creates"
+    },
+    {
+      "id": "orchestrator_delegate_vision",
+      "fromNode": "orchestrator",
+      "toNode": "vision_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#6495ED",
+      "label": "delegates"
+    },
+    {
+      "id": "orchestrator_delegate_docs",
+      "fromNode": "orchestrator",
+      "toNode": "docs_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#6495ED",
+      "label": "delegates"
+    },
+    {
+      "id": "orchestrator_delegate_coder",
+      "fromNode": "orchestrator",
+      "toNode": "coder_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#6495ED",
+      "label": "delegates"
+    },
+    {
+      "id": "orchestrator_delegate_architect",
+      "fromNode": "orchestrator",
+      "toNode": "architect_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#6495ED",
+      "label": "delegates"
+    },
+    {
+      "id": "orchestrator_delegate_explorer",
+      "fromNode": "orchestrator",
+      "toNode": "explorer_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#6495ED",
+      "label": "delegates"
+    },
+    {
+      "id": "orchestrator_delegate_memory",
+      "fromNode": "orchestrator",
+      "toNode": "memory_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#6495ED",
+      "label": "delegates"
+    }
   ]
 }
