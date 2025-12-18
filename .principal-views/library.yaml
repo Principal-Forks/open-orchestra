@@ -1,0 +1,131 @@
+version: "1.0.0"
+name: "Open Orchestra Component Library"
+description: "Visual components for the multi-agent orchestrator system"
+
+nodeComponents:
+  orchestrator:
+    description: "Central coordinator that manages workers and delegates tasks"
+    defaultLabel: "Orchestrator Hub"
+    color: "#6495ED"
+    shape: "circle"
+    tags: ["system", "coordinator", "hub"]
+
+  worker:
+    description: "Specialized AI worker for specific tasks"
+    defaultLabel: "Worker"
+    color: "#FFD700"
+    shape: "rectangle"
+    tags: ["ai", "specialist", "agent"]
+
+  neo4j:
+    description: "Graph database for persistent project and global memory"
+    defaultLabel: "Neo4j Memory"
+    color: "#00BCD4"
+    shape: "cylinder"
+    tags: ["database", "memory", "graph"]
+
+  config:
+    description: "Orchestrator and worker configuration files"
+    defaultLabel: "Configuration"
+    color: "#9E9E9E"
+    shape: "document"
+    tags: ["config", "settings", "files"]
+
+  opencode:
+    description: "AI development platform and SDK"
+    defaultLabel: "OpenCode"
+    color: "#4CAF50"
+    shape: "hexagon"
+    tags: ["platform", "sdk", "host"]
+
+  registry:
+    description: "Manages all spawned worker instances"
+    defaultLabel: "Worker Registry"
+    color: "#795548"
+    shape: "diamond"
+    tags: ["system", "registry", "lifecycle"]
+
+  spawner:
+    description: "Handles worker creation and initialization"
+    defaultLabel: "Worker Spawner"
+    color: "#FF5722"
+    shape: "diamond"
+    tags: ["system", "creation", "startup"]
+
+  model_catalog:
+    description: "OpenCode model resolution and management"
+    defaultLabel: "Model Catalog"
+    color: "#3F51B5"
+    shape: "cloud"
+    tags: ["service", "models", "resolution"]
+
+edgeComponents:
+  delegates:
+    description: "Task delegation from orchestrator to worker"
+    label: "delegates"
+    color: "#6495ED"
+    style: "solid"
+    directed: true
+
+  manages:
+    description: "Orchestrator management of infrastructure"
+    label: "manages"
+    color: "#795548"
+    style: "solid"
+    directed: true
+
+  tracks:
+    description: "Registry tracking of worker instances"
+    label: "tracks"
+    color: "#FF9800"
+    style: "solid"
+    directed: false
+
+  stores:
+    description: "Data storage and retrieval operations"
+    label: "stores/queries"
+    color: "#00BCD4"
+    style: "solid"
+    directed: true
+
+  config:
+    description: "Configuration relationships"
+    label: "configuration"
+    color: "#9E9E9E"
+    style: "dashed"
+    directed: false
+
+  model_resolution:
+    description: "Model resolution from catalog"
+    label: "model resolution"
+    color: "#3F51B5"
+    style: "dashed"
+    directed: false
+
+  plugin_host:
+    description: "OpenCode plugin hosting relationship"
+    label: "plugin host"
+    color: "#4CAF50"
+    style: "solid"
+    directed: true
+
+  notifications:
+    description: "Notification and alert relationships"
+    label: "notifications"
+    color: "#FFC107"
+    style: "dotted"
+    directed: false
+
+  context_mgmt:
+    description: "Context management relationships"
+    label: "context mgmt"
+    color: "#FF6F00"
+    style: "dotted"
+    directed: false
+
+  creates:
+    description: "Worker creation relationships"
+    label: "creates"
+    color: "#FF5722"
+    style: "solid"
+    directed: true

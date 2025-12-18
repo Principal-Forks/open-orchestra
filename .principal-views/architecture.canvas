@@ -1,0 +1,407 @@
+{
+  "pv": {
+    "name": "Open Orchestra Architecture",
+    "version": "1.0.0"
+  },
+  "nodes": [
+    {
+      "id": "opencode",
+      "type": "opencode",
+      "x": 0,
+      "y": 0,
+      "width": 120,
+      "height": 80,
+      "color": "#4CAF50",
+      "pv": {
+        "nodeType": "opencode",
+        "shape": "hexagon"
+      }
+    },
+    {
+      "id": "orchestrator",
+      "type": "orchestrator",
+      "x": 200,
+      "y": 0,
+      "width": 140,
+      "height": 140,
+      "color": "#6495ED",
+      "pv": {
+        "nodeType": "orchestrator",
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "config",
+      "type": "config",
+      "x": 100,
+      "y": -150,
+      "width": 100,
+      "height": 60,
+      "color": "#9E9E9E",
+      "pv": {
+        "nodeType": "config",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "model_catalog",
+      "type": "model_catalog",
+      "x": 200,
+      "y": -150,
+      "width": 120,
+      "height": 60,
+      "color": "#3F51B5",
+      "pv": {
+        "nodeType": "model_catalog",
+        "shape": "hexagon"
+      }
+    },
+    {
+      "id": "registry",
+      "type": "registry",
+      "x": 380,
+      "y": -20,
+      "width": 110,
+      "height": 80,
+      "color": "#795548",
+      "pv": {
+        "nodeType": "registry",
+        "shape": "diamond"
+      }
+    },
+    {
+      "id": "spawner",
+      "type": "spawner",
+      "x": 380,
+      "y": 80,
+      "width": 110,
+      "height": 80,
+      "color": "#FF5722",
+      "pv": {
+        "nodeType": "spawner",
+        "shape": "diamond"
+      }
+    },
+    {
+      "id": "model_catalog",
+      "type": "model_catalog",
+      "x": 200,
+      "y": -150,
+      "width": 120,
+      "height": 60,
+      "color": "#3F51B5",
+      "pv": {
+        "nodeType": "model_catalog",
+        "shape": "hexagon"
+      }
+    },
+    {
+      "id": "vision_worker",
+      "type": "worker",
+      "x": 550,
+      "y": -120,
+      "width": 100,
+      "height": 60,
+      "color": "#FF9800",
+      "pv": {
+        "nodeType": "worker",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "docs_worker",
+      "type": "worker",
+      "x": 550,
+      "y": -40,
+      "width": 100,
+      "height": 60,
+      "color": "#2196F3",
+      "pv": {
+        "nodeType": "worker",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "coder_worker",
+      "type": "worker",
+      "x": 550,
+      "y": 40,
+      "width": 100,
+      "height": 60,
+      "color": "#4CAF50",
+      "pv": {
+        "nodeType": "worker",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "architect_worker",
+      "type": "worker",
+      "x": 550,
+      "y": 120,
+      "width": 100,
+      "height": 60,
+      "color": "#9C27B0",
+      "pv": {
+        "nodeType": "worker",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "explorer_worker",
+      "type": "worker",
+      "x": 680,
+      "y": -40,
+      "width": 100,
+      "height": 60,
+      "color": "#607D8B",
+      "pv": {
+        "nodeType": "worker",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "memory_worker",
+      "type": "worker",
+      "x": 680,
+      "y": 40,
+      "width": 100,
+      "height": 60,
+      "color": "#00BCD4",
+      "pv": {
+        "nodeType": "worker",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "neo4j",
+      "type": "neo4j",
+      "x": 850,
+      "y": 80,
+      "width": 100,
+      "height": 80,
+      "color": "#00BCD4",
+      "pv": {
+        "nodeType": "neo4j",
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "idle_notifier",
+      "type": "worker",
+      "x": 200,
+      "y": 150,
+      "width": 120,
+      "height": 50,
+      "color": "#FFC107",
+      "pv": {
+        "nodeType": "worker",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "context_pruning",
+      "type": "worker",
+      "x": 50,
+      "y": 150,
+      "width": 120,
+      "height": 50,
+      "color": "#FF6F00",
+      "pv": {
+        "nodeType": "worker",
+        "shape": "rectangle"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "opencode_to_orchestrator",
+      "fromNode": "opencode",
+      "toNode": "orchestrator",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#4CAF50",
+      "label": "plugin host"
+    },
+    {
+      "id": "config_to_orchestrator",
+      "fromNode": "config",
+      "toNode": "orchestrator",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#9E9E9E",
+      "label": "configuration"
+    },
+    {
+      "id": "model_catalog_to_orchestrator",
+      "fromNode": "model_catalog",
+      "toNode": "orchestrator",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#3F51B5",
+      "label": "model resolution"
+    },
+    {
+      "id": "orchestrator_to_registry",
+      "fromNode": "orchestrator",
+      "toNode": "registry",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#795548",
+      "label": "manages"
+    },
+    {
+      "id": "orchestrator_to_spawner",
+      "fromNode": "orchestrator",
+      "toNode": "spawner",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#795548",
+      "label": "manages"
+    },
+    {
+      "id": "registry_to_vision",
+      "fromNode": "registry",
+      "toNode": "vision_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF9800",
+      "label": "tracks"
+    },
+    {
+      "id": "registry_to_docs",
+      "fromNode": "registry",
+      "toNode": "docs_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF9800",
+      "label": "tracks"
+    },
+    {
+      "id": "registry_to_coder",
+      "fromNode": "registry",
+      "toNode": "coder_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF9800",
+      "label": "tracks"
+    },
+    {
+      "id": "registry_to_architect",
+      "fromNode": "registry",
+      "toNode": "architect_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF9800",
+      "label": "tracks"
+    },
+    {
+      "id": "registry_to_explorer",
+      "fromNode": "registry",
+      "toNode": "explorer_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF9800",
+      "label": "tracks"
+    },
+    {
+      "id": "registry_to_memory",
+      "fromNode": "registry",
+      "toNode": "memory_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF9800",
+      "label": "tracks"
+    },
+    {
+      "id": "memory_to_neo4j",
+      "fromNode": "memory_worker",
+      "toNode": "neo4j",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#00BCD4",
+      "label": "stores/queries"
+    },
+    {
+      "id": "orchestrator_to_idle",
+      "fromNode": "orchestrator",
+      "toNode": "idle_notifier",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#FFC107",
+      "label": "notifications"
+    },
+    {
+      "id": "orchestrator_to_pruning",
+      "fromNode": "orchestrator",
+      "toNode": "context_pruning",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "#FF6F00",
+      "label": "context mgmt"
+    },
+    {
+      "id": "spawner_to_workers",
+      "fromNode": "spawner",
+      "toNode": "vision_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#FF5722",
+      "label": "creates"
+    },
+    {
+      "id": "orchestrator_delegate_vision",
+      "fromNode": "orchestrator",
+      "toNode": "vision_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#6495ED",
+      "label": "delegates"
+    },
+    {
+      "id": "orchestrator_delegate_docs",
+      "fromNode": "orchestrator",
+      "toNode": "docs_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#6495ED",
+      "label": "delegates"
+    },
+    {
+      "id": "orchestrator_delegate_coder",
+      "fromNode": "orchestrator",
+      "toNode": "coder_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#6495ED",
+      "label": "delegates"
+    },
+    {
+      "id": "orchestrator_delegate_architect",
+      "fromNode": "orchestrator",
+      "toNode": "architect_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#6495ED",
+      "label": "delegates"
+    },
+    {
+      "id": "orchestrator_delegate_explorer",
+      "fromNode": "orchestrator",
+      "toNode": "explorer_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#6495ED",
+      "label": "delegates"
+    },
+    {
+      "id": "orchestrator_delegate_memory",
+      "fromNode": "orchestrator",
+      "toNode": "memory_worker",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "#6495ED",
+      "label": "delegates"
+    }
+  ]
+}
