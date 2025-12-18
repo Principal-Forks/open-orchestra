@@ -390,5 +390,6 @@
       "color": "#6495ED",
       "label": "delegates"
     }
-  ]
+  ],
+  "edges": []
 }
